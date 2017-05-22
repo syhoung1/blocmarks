@@ -1,0 +1,214 @@
+/*
+ *= require_bootstrap-sprockets
+ */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.devise-forms {
+  background-color: rgba(10, 1, 1, .08);
+  margin: 0 auto;
+  width: 30%;
+  padding: 10px;
+  margin-top: 3em;
+  border: 1px solid gray;
+  border-radius: 0 10%;
+  box-shadow: 2px;
+}
+
+.devise-forms form, h2, a, div, em {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.devise-forms .field, .action {
+  padding: 0 auto;
+}
+
+em {
+  opacity: .3;
+}
+
+.field {
+  padding-left: 10%;
+}
+
+.devise-forms .input-field {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid black;
+  border-top: 2px solid rgba(1, 1, 1, 0);
+  width: 80%;
+  -webkit-transition: border .4s ease, background .2s ease .3s;
+  transition: border .4s ease, background .2s ease .3s;
+}
+
+.devise-forms .input-field:focus {
+  outline: none;
+  border-top: 2px solid black;
+  border-bottom: 2px solid rgba(1, 1, 1, 0);
+  background-color: rgba(1, 1, 1, .1);
+  -webkit-transition: border .4s ease, background .2s ease .3s;
+  transition: border .4s ease, background .2s ease .3s;
+}
+
+.devise-forms .input-label {
+  width: 100%;
+  opacity: .4;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.devise-forms .input-field:focus + .input-label {
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.devise-forms .actions {
+  text-align: center;
+}
+
+.devise-forms .actions input[type=submit] {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid rgba(1, 1, 1, .7);
+  border-right: 3px solid rgba(1, 1, 1, 0);
+  border-left: 3px solid rgba(1, 1, 1, 0);
+  -webkit-transition: border .3s;
+  transition: border .3s;
+}
+
+.devise-forms .actions input[type=submit]:hover {
+  border-bottom: 2px solid rgba(1, 1, 1, 0);
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  -webkit-transition: border .3s;
+  transition: border .3s;
+}
+
+.welcome-carousel {
+  background-color: rgba(1, 1, 1, .1);
+  border: 2px solid rgba(1, 1, 1, .5);
+  margin: 0 auto;
+  width: 80%;
+  height: 400px;
+  align-items: center;
+  color: black;
+}
+
+.center {
+  margin: auto auto;
+  text-align: center;
+  top: 25%;
+}
+
+.carousel-indicators li {
+  border-radius: 0;
+  width: 2.4em;
+  height: .5em;
+  border-color: white;
+  background: white;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.carousel-indicators li.active {
+  border-radius: 50%;
+  size: 110%;
+  background: transparent;
+}
+
+.container-full {
+  height: 100%;
+}
+
+.carousel-control-left {
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+  margin-bottom: 0;
+  -webkit-transition: background-color .5s ease-out;
+  -moz-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
+}
+
+.carousel-control-right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 15%;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 0 5%;
+  -webkit-transition: background-color .5s ease-out;
+  -moz-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
+}
+
+.carousel-control-left:hover {
+  background-color: rgba(100, 100, 100, .5);
+}
+
+.carousel-control-right:hover {
+  background-color: rgba(100, 100, 100, .5);
+}
+
+.glyphicon.glyphicon-export {
+  font-size: 8em;
+}
+
+.glyphicon.glyphicon-ok {
+  font-size: 8em;
+}
+
+.glyphicon.glyphicon-bookmark {
+  font-size: 2em;
+  color: burgundy;
+}
+
+.item {
+  max-height: 80%;
+}
+
+.description {
+  margin: auto;
+  display: flex;
+  max-width: 50%;
+  text-align: center;
+}
+
+.navbar-brand {
+  width: 10%;
+  color: white;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.navbar {
+  height: 50px;
+  border-bottom: 3px solid rgba(1, 1, 1, .3);
+  background-color: rgba(0, 0, 0, .35);
+  margin-bottom: 6em;
+}
+
+.navbar a, div, ul, li {
+  vertical-align: middle;
+}
