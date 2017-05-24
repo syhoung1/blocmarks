@@ -7,24 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class='navbar navbar-toggleable-md'>
-  <div class='collapse navbar-collapse'>
-    <div class='navbar-nav box'>
-      <span class='glyphicon glyphicon-bookmark'></span><%= link_to "Blocmarks", root_path, class: 'navbar-brand' %>
-      <ul class='nav navbar-nav pull-right'>
-        <% if current_user %>
-          <li>
-            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to "Sign In", new_user_session_path, class: 'nav-item nav-link' %>
-          </li>
-        <% end %>
-      </ul>
+  <nav class="nav-bar">
+    <div class="brand">
+      <span class="glyphicon glyphicon-bookmark brand-icon"></span>
+      <p class="brand-title">Blocmarks</p>
     </div>
-  </div>
-</nav>
+    <div class="user-links-container">
+      <% if current_user %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'user-links' %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path, class: 'user-links' %>
+      <% end %>
+    </div>
+  </nav>
 <%= yield %>
 
 </body>
