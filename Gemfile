@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'figaro'
 gem 'devise'
 gem 'validate_url'
+gem 'ionicons-rails'
 
 group :development, :test do
   gem 'byebug'

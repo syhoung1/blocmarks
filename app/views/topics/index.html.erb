@@ -1,0 +1,29 @@
+<div>
+  <div class='grid'>
+    <h3>
+      <%= link_to "Create a new topic", new_topic_path, class: "submit-link" %>
+    </h3>
+  </div>
+  <div class='grid half'>
+    <% @topics.each do |topic| %>
+      <figure class='figure-effect'>
+        <img src="<%= asset_path('blank-wallpaper.png') %>" alt="img16"/>
+        <figcaption> 
+          <h2>#<%= topic.title %></h2>
+          <p>
+            <a href="<%= edit_topic_path(topic) %>">
+              <i class='icon ion-edit'></i>
+            </a>
+            <a href="#">
+              <i class='icon ion-trash-b'></i>
+            </a>
+            <a href="<%= topic_path(topic) %>">
+              <i class='icon ion-ios-list'></i>
+            </a>
+          </p>
+        </figcaption>
+      </figure>
+      <% end %>
+  </div>
+</div>
+  

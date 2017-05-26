@@ -1,0 +1,26 @@
+<div>
+  <div class='grid'>
+    <h1 class='topic-title'>
+      <%= @topic.title %>
+    </h1>
+  </div>
+  <div class='grid third'>
+    <% @bookmarks.each do |bookmark| %>
+      <figure class='figure-effect'>
+        <h4><%= bookmark.url %></h4>
+        <img src="<%= asset_path('blank-wallpaper-printing.png') %>" alt="img16"/>
+        <figcaption> 
+          <p>
+            <a href="#">
+              <i class='icon ion-edit'></i>
+            </a>
+            <a href="#">
+              <i class='icon ion-trash-b'></i>
+            </a>
+          </p>
+        </figcaption>
+      </figure>
+      <% end %>
+  </div>
+</div>
+  
