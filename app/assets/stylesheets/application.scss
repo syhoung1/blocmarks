@@ -401,6 +401,12 @@ figure.figure-effect figcaption::before {
   transform: translate3d(60px, 40px, 0);
 }
 
+.grid.third figure.figure-effect figcaption::before {
+  right: 0;
+  bottom: 0;
+  border-width: 0;
+}
+
 figure.figure-effect figcaption::after {
   top: 0;
   left: 0;

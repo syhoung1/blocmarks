@@ -1,0 +1,13 @@
+<div class='grid'>
+  <h1>
+    <%= form_for [@topic, @bookmark] do |f| %>
+      <div class="topic-form">
+        <%= f.text_field :url, autofocus: true, class: 'input-field' %>
+        <%= f.label :url, class: 'input-label' %><br />
+      </div>
+    	<div class="actions">
+        <%= f.submit "Submit" %>
+    	</div>
+    <% end %>
+  </h1>
+</div>

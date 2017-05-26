@@ -3,24 +3,25 @@
     <h1 class='topic-title'>
       <%= @topic.title %>
     </h1>
+    <small>
+      <%= link_to "Add a bookmark", new_topic_bookmark_path(@topic), class: "submit-link" %>
+    </small>
   </div>
-  <div class='grid third'>
+  <div class='grid'>
     <% @bookmarks.each do |bookmark| %>
-      <figure class='figure-effect'>
-        <h4><%= bookmark.url %></h4>
-        <img src="<%= asset_path('blank-wallpaper-printing.png') %>" alt="img16"/>
-        <figcaption> 
+      <div class='url-grid'>
+        <h4><%= link_to bookmark.url, topic_bookmark_path(bookmark.topic, bookmark) %></h4>
           <p>
-            <a href="#">
+            <%= link_to edit_topic_bookmark_path(bookmark.topic, bookmark) do %>
               <i class='icon ion-edit'></i>
-            </a>
-            <a href="#">
+            <% end %>
+            <%= link_to topic_bookmark_path(bookmark.topic, bookmark), method: :delete do %>
               <i class='icon ion-trash-b'></i>
-            </a>
+            <% end %>
           </p>
-        </figcaption>
-      </figure>
-      <% end %>
+      </div>
+    <% end %>
+      
   </div>
 </div>
   
