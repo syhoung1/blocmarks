@@ -20,6 +20,7 @@ topics = Topic.all
 10.times do
   Bookmark.create(
     url: Faker::Internet.url,
-    topic: topics.sample
+    topic: topics.sample,
+    user: users.sample
   )
 end

@@ -15,6 +15,7 @@ gem 'figaro'
 gem 'devise'
 gem 'validate_url'
 gem 'ionicons-rails'
+gem 'pundit'
 
 group :development, :test do
   gem 'byebug'
