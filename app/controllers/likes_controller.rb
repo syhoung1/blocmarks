@@ -5,6 +5,7 @@ class LikesController < ApplicationController
   def create
     @bookmark = Bookmark.find(params[:bookmark_id])
     like = current_user.likes.build(bookmark: @bookmark)
+    authorize like
     
     if like.save
       redirect_to @bookmark.topic, notice: "You've liked this bookmark!"
@@ -17,6 +18,7 @@ class LikesController < ApplicationController
   def destroy
     @bookmark = Bookmark.find(params[:bookmark_id])
     like = @bookmark.likes.find(params[:id])
+    authorize like
     
     if like.destroy
       redirect_to @bookmark.topic, notice: "You've unliked this bookmark!"
