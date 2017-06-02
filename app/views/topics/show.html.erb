@@ -26,8 +26,8 @@
               <i class='icon ion-trash-b'></i>
             <% end %>
           </p>
+          <%= render partial: 'likes/like', locals: { topic: @topic, bookmark: bookmark } %>
       </div>
-      <%= render partial: 'likes/like', locals: { topic: @topic, bookmark: bookmark } %>
     <% end %>
   </div>
 </div>
