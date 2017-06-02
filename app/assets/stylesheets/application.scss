@@ -294,7 +294,15 @@ a.brand-title:hover {
   color: white;
 }
 
-a.user-links {
+.user-links {
+  display: table;
+}
+
+.user-links span {
+  margin: auto 0;
+}
+
+.user-links a {
   display: table-cell;
   vertical-align: middle;
   height: 100%;
@@ -302,9 +310,10 @@ a.user-links {
   border: 3px solid black;
   padding: .5em;
   margin: auto 0;
+  width: auto;
 }
 
-a.user-links:hover {
+.user-links a:hover {
   text-decoration: none;
   border: 3px solid white;
   -webkit-transition: .2s;
@@ -537,4 +546,49 @@ a.submit-link:hover {
 .topic-title {
   text-transform: capitalize;
   font-weight: bold;
+}
+
+div.tab {
+  overflow: hidden;
+  border-bottom: 1px solid maroon;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+div.tab button {
+  border: none;
+  outline: none;
+  background: transparent;
+  float: left;
+  color: white;
+  font-size: 1.5em;
+  border-top: 3px;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+
+div.tab button:hover {
+  border-color: white;
+}
+
+div.tab button.active {
+  background: rbga(0, 0, 0, .8);
+  border-color: white;
+}
+
+.tabcontent {
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s; 
+}
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

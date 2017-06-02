@@ -15,3 +15,37 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+var openTab = function(event, tabName) {
+    var i, tabcontent, tablinks, tab;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for(i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    tablinks = document.getElementsByClassName("tablinks");
+    for(i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    
+    tab = document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " active";
+};
+
+document.addEventListener("turbolinks:load", function(){
+    console.log("test");
+    
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for(var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    var tablinks = document.getElementsByClassName("tablinks");
+    for(var i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    
+    document.getElementById("defaultOpen").className += " active";
+    document.getElementById("bookmarks").style.display = "block";
+});
