@@ -17,10 +17,11 @@ end
 
 topics = Topic.all
 
-10.times do
+60.times do
   Bookmark.create(
     url: Faker::Internet.url,
     topic: topics.sample,
-    user: users.sample
+    user: users.sample,
+    name: Faker::Lorem.word
   )
 end

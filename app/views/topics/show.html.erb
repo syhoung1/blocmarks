@@ -10,7 +10,14 @@
   <div class='grid'>
     <% @bookmarks.each do |bookmark| %>
       <div class='url-grid'>
-        <h4><%= link_to bookmark.url, topic_bookmark_path(bookmark.topic, bookmark) %></h4>
+        <blockquote class="embedly-card">
+          <h4>
+            <a href="<%= bookmark.url %>">
+              <%= bookmark.name %>
+            </a>
+          </h4>
+        </blockquote>
+        <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
           <p>
             <%= link_to edit_topic_bookmark_path(bookmark.topic, bookmark) do %>
               <i class='icon ion-edit'></i>
@@ -24,4 +31,3 @@
     <% end %>
   </div>
 </div>
-  

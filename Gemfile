@@ -16,6 +16,7 @@ gem 'devise'
 gem 'validate_url'
 gem 'ionicons-rails'
 gem 'pundit'
+gem 'embedly'
 
 group :development, :test do
   gem 'byebug'
